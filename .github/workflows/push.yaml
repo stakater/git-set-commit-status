@@ -28,7 +28,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-        RELEASE_BRANCHES: master
+        RELEASE_BRANCHES: main
         DEFAULT_BUMP: patch
         DRY_RUN: true
 
@@ -63,7 +63,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-        RELEASE_BRANCHES: master
+        RELEASE_BRANCHES: main
         DEFAULT_BUMP: patch
 
     - name: Notify Failure

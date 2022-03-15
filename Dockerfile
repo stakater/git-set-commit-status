@@ -1,6 +1,5 @@
 FROM registry.access.redhat.com/ubi7/python-38
 
-
 USER 0
 WORKDIR /src/git-set-commit-status
 ADD . /src/git-set-commit-status

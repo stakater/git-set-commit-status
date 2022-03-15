@@ -35,8 +35,8 @@ def get_revision(webhook_payload, provider):
             return webhook_payload["sha"]
 
         # pull request
-        elif "pull_request" in webhook_payload.keys() and "base" in webhook_payload["pull_request"].keys() and "sha" in webhook_payload["pull_request"]["base"].keys():
-            return webhook_payload["pull_request"]["base"]["sha"]
+        elif "pull_request" in webhook_payload.keys() and "head" in webhook_payload["pull_request"].keys() and "sha" in webhook_payload["pull_request"]["head"].keys():
+            return webhook_payload["pull_request"]["head"]["sha"]
 
         else:
             print("Could not determine git revision.")
